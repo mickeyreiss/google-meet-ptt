@@ -62,10 +62,8 @@ setInterval(() => {
         const buttons = videoCanvas.parentElement.parentElement.parentElement;
 
         // Check if the chat window is open
-        if (buttons.children[1] === undefined) {
-            if (document.getElementsByName("chatTextInput")) {
-                chatOpen = true;
-            }
+        if (document.querySelector("[name=chatTextInput]")) {
+            chatOpen = true;
         } else {
             chatOpen = false;
         }
